@@ -14,11 +14,11 @@ namespace Tyuiu.ZamyakinaOA.Sprint5.Task0.V30.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = Path.Combine(Directory.GetCurrentDirectory(), "OutPutFileTask0.txt");
-            double z = (Math.Pow(x, 2) + 1) / (3 * x + 4);
-            z = Math.Round(z, 3);
-            File.WriteAllText(path, Convert.ToString(z));
-            return path;
+            double y = (Math.Pow(x, 2) + 1) / (3 * x + 4);
+            y = Math.Round(y, 3);
+            string filePath = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
+            File.WriteAllText(filePath, y.ToString());
+            return filePath;
         }
     }
 }
