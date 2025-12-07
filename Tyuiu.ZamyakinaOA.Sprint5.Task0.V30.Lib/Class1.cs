@@ -14,7 +14,7 @@ namespace Tyuiu.ZamyakinaOA.Sprint5.Task0.V30.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
+            string path = Path.Combine(Directory.GetCurrentDirectory(), "OutPutFileTask0.txt");
 
             double z = (Math.Pow(x, 2) + 1) / (3 * x + 4);
             z = Math.Round(z, 3);
